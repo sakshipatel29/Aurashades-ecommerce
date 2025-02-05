@@ -20,7 +20,7 @@ export const StoreProvider = ({children}) => {
         })
     }
     const removeFromBasket = (product) => {
-        const updatedBasket = state.products.filter((currentProduct) => currentProduct !== product.name);
+        const updatedBasket = state.products.filter((currentProduct) => currentProduct.name !== product.name);
 
         updatedPrice(updatedBasket);
 
