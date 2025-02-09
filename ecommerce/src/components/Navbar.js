@@ -1,17 +1,19 @@
-import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
-import { StoreContext } from '../context-and-reduce/StoreContext'
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { StoreContext } from '../context-and-reduce/StoreContext';
+import './Navbar.css';
 
 const Navbar = () => {
-    const {products} = useContext(StoreContext);
+    const { products } = useContext(StoreContext);
+
     return (
-        <div>
-            <Link to='/'>Home</Link>
-            <Link to='/basket'>Basket
-            <span>{products.length}</span>
+        <nav className="navbar">
+            <Link to='/' className="nav-link">Home</Link>
+            <Link to='/basket' className="nav-link basket-link">
+                Basket <span className="basket-count">{products.length}</span>
             </Link>
-        </div>
-    )
+        </nav>
+    );
 }
 
 export default Navbar;
