@@ -1,28 +1,28 @@
-import React, { useContext } from 'react'
+import React, { useContext } from 'react';
 import { StoreContext } from '../context-and-reduce/StoreContext';
+import '../styles/Product.css'; // Import CSS file
 
-const Product = ({item}) => {
-
-  const {addToBasket} = useContext(StoreContext);
+const Product = ({ item }) => {
+  const { addToBasket } = useContext(StoreContext);
 
   const handleAdd = () => {
     addToBasket(item);
-  }
-  
-  return (
-    <div>
-        <img src={item.image} alt='glasses' width={400} height={400}/>
-            <div>
-                <div>
-                    <p>{item.name}</p>
-                    <p>{item.price}</p>
-                </div>
-                <div>
-                    <button onClick={handleAdd}>Add to Basket</button>
-                </div>
-            </div>
-    </div>
-  )
-}
+  };
 
-export default Product
+  return (
+    <div className="product-card">
+      <img src={item.image} alt={item.name} className="product-image" />
+      <div className="product-info">
+        <div className="product-details">
+          <p className="product-name">{item.name}</p>
+          <p className="product-price">${item.price}</p>
+        </div>
+        <button className="add-button" onClick={handleAdd}>
+          Add to Basket
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Product;

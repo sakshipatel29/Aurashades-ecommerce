@@ -1,0 +1,42 @@
+.basket-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .basket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .basket-header h3 {
+    margin: 0;
+    color: #333;
+  }
+  
+  .total-amount {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #28a745;
+  }
+  
+  .basket-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .empty-basket {
+    text-align: center;
+    color: #777;
+    font-size: 1.1em;
+    margin-top: 20px;
+  }
+  
