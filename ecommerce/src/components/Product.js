@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { StoreContext } from '../context-and-reduce/StoreContext';
-import '../styles/Product.css'; // Import CSS file
+import './Product.css'; // Import CSS file
 
 const Product = ({ item }) => {
   const { addToBasket } = useContext(StoreContext);
